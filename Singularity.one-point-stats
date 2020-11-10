@@ -19,7 +19,8 @@ From: continuumio/conda-ci-linux-64-python3.8
 %post
   . /opt/conda/etc/profile.d/conda.sh && conda update -n base -c defaults conda && \
   conda create -n one-point-stats -c conda-forge python=3.8 ipython ipykernel \
-    jupyterlab numpy scipy matplotlib pandas xarray h5py astropy healpy netcdf4
+    jupyterlab numpy scipy matplotlib pandas xarray dask netcdf4 bottleneck \
+    h5py astropy healpy
 
   echo "export CONDA_INIT_SCRIPT=/opt/conda/etc/profile.d/conda.sh" >> $SINGULARITY_ENVIRONMENT
 
