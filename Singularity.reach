@@ -50,7 +50,7 @@ From: ubuntu:20.04
   . $CONDA_INIT_SCRIPT && conda update -n base conda
 
   # Create `hera1` enviroment and install dependencies for HEREA packages.
-  conda create -n reach -c conda-forge python=3.8 ipython ipykernel numpy
+  conda create -n reach -c conda-forge python=3.8 ipython ipykernel numpy \
     scipy scikit-learn matplotlib pandas astropy astropy-healpix astroquery \
     healpy pyuvdata h5py pyyaml xarray netcdf4 h5netcdf dask jupyterlab ipympl
 
